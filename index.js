@@ -14,10 +14,10 @@ module.exports = {
    * All deviations from defaults are commented. Otherwise, rules use default settings.
    */
   rules: {
-    /**
+    /**************************************************************************
      * Possible Problems
-     * https://eslint.org/docs/latest/rules/#possible-problems
-     */
+     * @see https://eslint.org/docs/latest/rules/#possible-problems
+     *************************************************************************/
     'array-callback-return': [
       'error',
       {
@@ -196,10 +196,10 @@ module.exports = {
       },
     ],
 
-    /**
+    /**************************************************************************
      * Suggestions
-     * https://eslint.org/docs/latest/rules/#suggestions
-     */
+     * @see https://eslint.org/docs/latest/rules/#suggestions
+     *************************************************************************/
     'accessor-pairs': ['error'],
     'arrow-body-style': ['error'],
     'block-scoped-var': ['error'],
@@ -348,10 +348,10 @@ module.exports = {
     'vars-on-top': ['error'],
     'yoda': ['error'],
 
-    /**
+    /**************************************************************************
      * Layout & Formatting
-     * https://eslint.org/docs/latest/rules/#layout--formatting
-     */
+     * @see https://eslint.org/docs/latest/rules/#layout--formatting
+     *************************************************************************/
     'array-bracket-newline': ['error'],
     'array-bracket-spacing': ['error'],
     'array-element-newline': ['error'],

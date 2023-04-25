@@ -1,0 +1,36 @@
+{
+  "name": "@kamilmielnik/eslint-config",
+  "version": "0.0.1",
+  "description": "Kamil Mielnik's ESLint Config",
+  "keywords": [
+    "Kamil",
+    "Mielnik",
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamilmielnik/eslint-config.git"
+  },
+  "author": {
+    "name": "Kamil Mielnik",
+    "email": "kamil@kamilmielnik.com",
+    "url": "https://kamilmielnik.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamilmielnik/eslint-config/issues"
+  },
+  "homepage": "https://github.com/kamilmielnik/eslint-config#readme",
+  "scripts": {
+    "prettier": "prettier --check './**/*.{js,json,ts,tsx}'",
+    "prettier:fix": "prettier --write './**/*.{js,json,ts,tsx}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}

@@ -4,13 +4,7 @@ module.exports = {
     './rules/eslint-suggestions',
     './rules/eslint-layout-and-formatting',
   ].map(require.resolve),
-  parserOptions: {
-    ecmaVersion: 2018,
-    ecmaFeatures: {
-      impliedStrict: true,
-      jsx: true,
-    },
-    sourceType: 'module',
-  },
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   rules: {},
 };

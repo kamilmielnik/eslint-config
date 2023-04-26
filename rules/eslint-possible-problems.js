@@ -166,12 +166,10 @@ module.exports = {
       },
     ],
     'no-useless-backreference': ['error'],
-    'require-atomic-updates': [
-      'error',
-      {
-        allowProperties: false,
-      },
-    ],
+    /**
+     * Disabled because it gives too many false positives.
+     */
+    'require-atomic-updates': ['off'],
     'use-isnan': [
       'error',
       {

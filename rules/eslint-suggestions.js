@@ -39,16 +39,10 @@ module.exports = {
      * A comment can start with a variable name which is camelCase.
      */
     'capitalized-comments': ['off'],
-    'class-methods-use-this': [
-      'error',
-      {
-        /**
-         * render - for React components
-         */
-        exceptMethods: 'render',
-        enforceForClassFields: true,
-      },
-    ],
+    /**
+     * Disabled because it gives too many errors when practicing polymorphism.
+     */
+    'class-methods-use-this': ['off'],
     /**
      * Only warning as this is an arbitrary thing.
      */
@@ -526,22 +520,12 @@ module.exports = {
         ignoreReadBeforeAssign: false,
       },
     ],
-    'prefer-destructuring': [
-      'error',
-      {
-        VariableDeclarator: {
-          array: true,
-          object: true,
-        },
-        AssignmentExpression: {
-          array: true,
-          object: true,
-        },
-      },
-      {
-        enforceForRenamedProperties: false,
-      },
-    ],
+    /**
+     * This rule is disabled because it is not ideal.
+     * Destructuring is an overhead when reading a single property.
+     * But this rule does not allow to make an exception for it.
+     */
+    'prefer-destructuring': ['off'],
     'prefer-exponentiation-operator': ['error'],
     'prefer-named-capture-group': ['error'],
     'prefer-numeric-literals': ['error'],

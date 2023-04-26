@@ -71,7 +71,13 @@ module.exports = {
         allowKeywords: true,
       },
     ],
-    'eqeqeq': ['error', 'always', 'always'],
+    'eqeqeq': [
+      'error',
+      'always',
+      {
+        null: 'always',
+      },
+    ],
     /**
      * Disabled because it's no longer relevant.
      */
@@ -190,11 +196,11 @@ module.exports = {
      */
     'max-statements': [
       'warn',
+      /**
+       * Even short functions can easily have over 10 statements.
+       */
+      20,
       {
-        /**
-         * Even short functions can easily have over 10 statements.
-         */
-        max: 20,
         ignoreTopLevelFunctions: false,
       },
     ],
@@ -463,14 +469,14 @@ module.exports = {
         ignoreExport: false,
       },
     ],
-    'no-useless-return': [
+    'no-useless-return': ['error'],
+    'no-var': ['error'],
+    'no-void': [
       'error',
       {
         allowAsStatement: false,
       },
     ],
-    'no-var': ['error'],
-    'no-void': ['error'],
     /**
      * It's not relevant.
      */

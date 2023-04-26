@@ -760,10 +760,20 @@ module.exports = {
     'require-await': ['error'],
     'require-unicode-regexp': ['error'],
     'require-yield': ['error'],
-    // TODO: configure https://eslint.org/docs/latest/rules/sort-imports
-    'sort-imports': ['error'],
-    // TOOD: configure https://eslint.org/docs/latest/rules/sort-keys
-    'sort-keys': ['error'],
+    /**
+     * import/order plugin will take care of sorting imports.
+     */
+    'sort-imports': ['off'],
+    'sort-keys': [
+      'error',
+      'asc',
+      {
+        caseSensitive: true,
+        minKeys: 2,
+        natural: false,
+        allowLineSeparatedGroups: false,
+      },
+    ],
     /**
      * Disabled because of 'no-var' rule.
      */

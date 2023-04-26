@@ -198,11 +198,15 @@ module.exports = {
           'export',
           'for',
           'if',
-          'return',
           'switch',
           'try',
           'while',
         ],
+      },
+      {
+        blankLine: 'any',
+        prev: 'export',
+        next: 'export',
       },
     ],
     /**

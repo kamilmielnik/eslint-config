@@ -16,13 +16,11 @@ module.exports = {
         enforceForClassMembers: true,
       },
     ],
-    'arrow-body-style': [
-      'error',
-      'as-needed',
-      {
-        requireReturnForObjectLiteral: false,
-      },
-    ],
+    /**
+     * Disabled because often curly braces can help reduce
+     * the number of lines in a expression.
+     */
+    'arrow-body-style': ['off'],
     /**
      * Disabled because of 'no-var' rule.
      */
@@ -44,6 +42,10 @@ module.exports = {
     'class-methods-use-this': [
       'error',
       {
+        /**
+         * render - for React components
+         */
+        exceptMethods: 'render',
         enforceForClassFields: true,
       },
     ],
@@ -405,10 +407,7 @@ module.exports = {
     'no-shadow': [
       'error',
       {
-        /**
-         * Be more strict to ease search-and-replace.
-         */
-        builtinGlobals: true,
+        builtinGlobals: false,
         /**
          * Be more strict to ease search-and-replace.
          */
@@ -423,7 +422,10 @@ module.exports = {
     'no-ternary': ['off'],
     'no-throw-literal': ['error'],
     'no-undef-init': ['error'],
-    'no-undefined': ['error'],
+    /**
+     * Allow undefined.
+     */
+    'no-undefined': ['off'],
     /**
      * Although generally discouraged, there are cases where it's needed,
      * e.g. when indicating intentionally unused function argument.

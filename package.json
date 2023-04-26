@@ -26,6 +26,9 @@
     "url": "https://github.com/kamilmielnik/eslint-config/issues"
   },
   "homepage": "https://github.com/kamilmielnik/eslint-config#readme",
+  "files": [
+    "**/*.js"
+  ],
   "scripts": {
     "prettier": "prettier --check './**/*.{js,json,ts,tsx}'",
     "prettier:fix": "prettier --write './**/*.{js,json,ts,tsx}'",

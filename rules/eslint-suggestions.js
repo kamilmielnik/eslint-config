@@ -578,7 +578,14 @@ module.exports = {
      * Disabled because of 'no-var' rule.
      */
     'sort-vars': ['error'],
-    'spaced-comment': ['error', 'always'],
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        markers: ['/'],
+        balanced: true,
+      },
+    ],
     /**
      * Strict mode should be applied globally.
      */

@@ -34,12 +34,12 @@
     "prettier:fix": "prettier --write './**/*.{js,json,ts,tsx}'",
     "release": "np --no-tests"
   },
-  "devDependencies": {
-    "np": "^7.7.0",
-    "prettier": "^2.8.8"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1"
+  },
+  "devDependencies": {
+    "np": "^7.7.0",
+    "prettier": "^2.8.8"
   }
 }

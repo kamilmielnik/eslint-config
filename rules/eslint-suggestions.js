@@ -583,7 +583,6 @@ module.exports = {
       'always',
       {
         markers: ['/'],
-        balanced: true,
       },
     ],
     /**

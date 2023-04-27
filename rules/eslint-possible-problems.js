@@ -23,7 +23,7 @@ module.exports = {
         allowImplicit: false,
       },
     ],
-    'no-async-promise-executor': 'off',
+    'no-async-promise-executor': ['off'],
     /**
      * Disabled because it would give too many false positives.
      */
@@ -33,7 +33,7 @@ module.exports = {
     /**
      * Disabled because some algorithms are more concise with this notation.
      */
-    'no-cond-assign': 'off',
+    'no-cond-assign': ['off'],
 
     'no-const-assign': ['error'],
     'no-constant-binary-expression': ['error'],
@@ -98,7 +98,7 @@ module.exports = {
     /**
      * Disabled because it would give too many false positives.
      */
-    'no-sparse-arrays': 'off',
+    'no-sparse-arrays': ['off'],
     'no-template-curly-in-string': ['error'],
     'no-this-before-super': ['error'],
     'no-undef': [
@@ -150,21 +150,10 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
-    'no-use-before-define': [
-      'error',
-      {
-        /**
-         * Clean code: read it top to bottom, like a newspaper or a book.
-         */
-        functions: false,
-        /**
-         * Clean code: read it top to bottom, like a newspaper or a book.
-         */
-        classes: false,
-        variables: true,
-        allowNamedExports: false,
-      },
-    ],
+    /**
+     * Clean code: read it top to bottom, like a newspaper or a book.
+     */
+    'no-use-before-define': ['off'],
     'no-useless-backreference': ['error'],
     /**
      * Disabled because it gives too many false positives.

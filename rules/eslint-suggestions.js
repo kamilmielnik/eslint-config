@@ -153,10 +153,7 @@ module.exports = {
     'max-lines-per-function': [
       'warn',
       {
-        /**
-         * TODO: change this number for tsx & jsx files
-         */
-        max: 40,
+        max: 50,
         skipBlankLines: false,
         skipComments: false,
         IIFEs: false,
@@ -557,7 +554,11 @@ module.exports = {
      * Be consistent.
      */
     'radix': ['error', 'always'],
-    'require-await': ['error'],
+    /**
+     * It can break consistency of similar functions.
+     * It can hinder the fact that developer can use await in given function.
+     */
+    'require-await': ['off'],
     'require-unicode-regexp': ['error'],
     'require-yield': ['error'],
     /**

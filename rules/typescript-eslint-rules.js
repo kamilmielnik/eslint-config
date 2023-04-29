@@ -15,7 +15,16 @@ module.exports = {
             readonly: 'generic',
           },
         ],
-        '@typescript-eslint/await-thenable': ['error'],
+        /**
+         * Disabled because it requires project-specific configuration.
+         * Otherwise it will throw this error:
+         *    You have used a rule which requires parserServices to be generated.
+         *    You must therefore provide a value for the "parserOptions.project"
+         *    property for @typescript-eslint/parser.
+         *
+         * Should be enabled per project.
+         */
+        '@typescript-eslint/await-thenable': ['off'],
         '@typescript-eslint/ban-ts-comment': [
           'error',
           {

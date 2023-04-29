@@ -251,24 +251,22 @@ module.exports = {
         '@typescript-eslint/method-signature-style': ['error', 'property'],
         '@typescript-eslint/naming-convention': [
           'error',
-          [
-            {
-              selector: 'default',
-              format: ['camelCase'],
-              leadingUnderscore: 'allow',
-              trailingUnderscore: 'forbid',
-            },
-            {
-              selector: 'variable',
-              format: ['camelCase', 'UPPER_CASE'],
-              leadingUnderscore: 'allow',
-              trailingUnderscore: 'forbid',
-            },
-            {
-              selector: 'typeLike',
-              format: ['PascalCase'],
-            },
-          ],
+          {
+            selector: 'default',
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+            trailingUnderscore: 'forbid',
+          },
+          {
+            selector: 'variable',
+            format: ['camelCase', 'UPPER_CASE'],
+            leadingUnderscore: 'allow',
+            trailingUnderscore: 'forbid',
+          },
+          {
+            selector: 'typeLike',
+            format: ['PascalCase'],
+          },
         ],
         '@typescript-eslint/no-base-to-string': [
           'error',

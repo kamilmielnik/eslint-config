@@ -319,7 +319,7 @@ module.exports = {
      */
     'no-magic-numbers': ['off'],
     /**
-     * Let prettier take care of this formatting.
+     * Leave it to Prettier.
      */
     'no-mixed-operators': ['off'],
     'no-multi-assign': [

@@ -3,6 +3,7 @@ module.exports = {
     './rules/eslint-possible-problems',
     './rules/eslint-suggestions',
     './rules/eslint-layout-and-formatting',
+    './rules/typescript-eslint-rules',
   ].map(require.resolve),
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -24,6 +25,7 @@ module.exports = {
             max: 5,
           },
         ],
+        '@typescript-eslint/no-non-null-assertion': ['off'],
       },
     },
     {

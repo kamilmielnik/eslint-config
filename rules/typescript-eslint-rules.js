@@ -15,16 +15,7 @@ module.exports = {
             readonly: 'generic',
           },
         ],
-        /**
-         * Disabled because it requires project-specific configuration.
-         * Otherwise it will throw this error:
-         *    You have used a rule which requires parserServices to be generated.
-         *    You must therefore provide a value for the "parserOptions.project"
-         *    property for @typescript-eslint/parser.
-         *
-         * Should be enabled per project.
-         */
-        '@typescript-eslint/await-thenable': ['off'],
+        '@typescript-eslint/await-thenable': ['error'],
         '@typescript-eslint/ban-ts-comment': [
           'error',
           {
@@ -48,21 +39,12 @@ module.exports = {
         '@typescript-eslint/class-literal-property-style': ['off'],
         '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
         '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
-        /**
-         * Disabled because it requires project-specific configuration.
-         * Otherwise it will throw this error:
-         *    You have used a rule which requires parserServices to be generated.
-         *    You must therefore provide a value for the "parserOptions.project"
-         *    property for @typescript-eslint/parser.
-         *
-         * Should be enabled per project.
-         */
         '@typescript-eslint/consistent-type-assertions': [
-          'off',
-          // {
-          //   assertionStyle: 'as',
-          //   objectLiteralTypeAssertions: 'never',
-          // },
+          'error',
+          {
+            assertionStyle: 'as',
+            objectLiteralTypeAssertions: 'never',
+          },
         ],
         /**
          * Disabled because both interface and type are useful.

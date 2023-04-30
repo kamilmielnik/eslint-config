@@ -576,49 +576,191 @@ module.exports = {
         ],
 
         /**
-         *
+         * Leave it to Prettier.
          */
-        '@typescript-eslint/block-spacing': ['error'],
-        '@typescript-eslint/brace-style': ['error'],
-        '@typescript-eslint/comma-dangle': ['error'],
-        '@typescript-eslint/comma-spacing': ['error'],
+        '@typescript-eslint/block-spacing': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/brace-style': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/comma-dangle': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/comma-spacing': ['off'],
         '@typescript-eslint/default-param-last': ['error'],
-        '@typescript-eslint/dot-notation': ['error'],
-        '@typescript-eslint/func-call-spacing': ['error'],
-        '@typescript-eslint/indent': ['error'],
-        '@typescript-eslint/init-declarations': ['error'],
-        '@typescript-eslint/key-spacing': ['error'],
-        '@typescript-eslint/keyword-spacing': ['error'],
-        '@typescript-eslint/lines-around-comment': ['error'],
-        '@typescript-eslint/lines-between-class-members': ['error'],
-        '@typescript-eslint/no-array-constructor': ['error'],
+        '@typescript-eslint/dot-notation': [
+          'error',
+          {
+            allowKeywords: true,
+            allowPrivateClassPropertyAccess: false,
+            allowProtectedClassPropertyAccess: false,
+            allowIndexSignaturePropertyAccess: false,
+          },
+        ],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/func-call-spacing': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/indent': ['off'],
+        /**
+         * Disabled because it would give too many false positives.
+         */
+        '@typescript-eslint/init-declarations': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/key-spacing': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/keyword-spacing': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/lines-around-comment': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/lines-between-class-members': ['off'],
+        /**
+         * Disabled to allow sparse arrays of specified size.
+         */
+        '@typescript-eslint/no-array-constructor': ['off'],
         '@typescript-eslint/no-dupe-class-members': ['error'],
-        '@typescript-eslint/no-duplicate-imports': ['error'],
-        '@typescript-eslint/no-empty-function': ['error'],
-        '@typescript-eslint/no-extra-parens': ['error'],
+        /**
+         * @deprecated
+         */
+        '@typescript-eslint/no-duplicate-imports': ['off'],
+        '@typescript-eslint/no-empty-function': [
+          'error',
+          {
+            allow: [],
+          },
+        ],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/no-extra-parens': ['off'],
         '@typescript-eslint/no-extra-semi': ['error'],
         '@typescript-eslint/no-implied-eval': ['error'],
-        '@typescript-eslint/no-invalid-this': ['error'],
+        '@typescript-eslint/no-invalid-this': [
+          'error',
+          {
+            capIsConstructor: true,
+          },
+        ],
         '@typescript-eslint/no-loop-func': ['error'],
         '@typescript-eslint/no-loss-of-precision': ['error'],
-        '@typescript-eslint/no-magic-numbers': ['error'],
-        '@typescript-eslint/no-redeclare': ['error'],
-        '@typescript-eslint/no-restricted-imports': ['error'],
-        '@typescript-eslint/no-shadow': ['error'],
-        '@typescript-eslint/no-throw-literal': ['error'],
-        '@typescript-eslint/no-unused-expressions': ['error'],
-        '@typescript-eslint/no-unused-vars': ['error'],
-        '@typescript-eslint/no-use-before-define': ['error'],
+        /**
+         * It depends. Let developer and code reviewer choose.
+         */
+        '@typescript-eslint/no-magic-numbers': ['off'],
+        '@typescript-eslint/no-redeclare': [
+          'error',
+          {
+            builtinGlobals: false,
+            ignoreDeclarationMerge: false,
+          },
+        ],
+        /**
+         * Disabled because it's not relevant.
+         */
+        '@typescript-eslint/no-restricted-imports': ['off'],
+        '@typescript-eslint/no-shadow': [
+          'error',
+          {
+            builtinGlobals: false,
+            /**
+             * Be more strict to ease search-and-replace.
+             */
+            hoist: 'all',
+            ignoreOnInitialization: false,
+            /**
+             * Avoid ambiguous names.
+             */
+            ignoreTypeValueShadow: false,
+            ignoreFunctionTypeParameterNameValueShadow: true,
+          },
+        ],
+        '@typescript-eslint/no-throw-literal': [
+          'error',
+          {
+            allowThrowingAny: false,
+            allowThrowingUnknown: false,
+          },
+        ],
+        '@typescript-eslint/no-unused-expressions': [
+          'error',
+          {
+            allowShortCircuit: false,
+            allowTernary: false,
+            allowTaggedTemplates: false,
+          },
+        ],
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            vars: 'all',
+            /**
+             * 'all' to be more strict.
+             */
+            args: 'all',
+            /**
+             * Match TypeScript behavior.
+             */
+            argsIgnorePattern: '^_',
+            caughtErrors: 'none',
+            /**
+             * Allow "omit attributes" operation with spread operator.
+             */
+            ignoreRestSiblings: true,
+          },
+        ],
+        /**
+         * Clean code: read it top to bottom, like a newspaper or a book.
+         */ '@typescript-eslint/no-use-before-define': ['off'],
         '@typescript-eslint/no-useless-constructor': ['error'],
-        '@typescript-eslint/object-curly-spacing': ['error'],
-        '@typescript-eslint/padding-line-between-statements': ['error'],
-        '@typescript-eslint/quotes': ['error'],
-        '@typescript-eslint/require-await': ['error'],
-        '@typescript-eslint/return-await': ['error'],
-        '@typescript-eslint/semi': ['error'],
-        '@typescript-eslint/space-before-blocks': ['error'],
-        '@typescript-eslint/space-before-function-paren': ['error'],
-        '@typescript-eslint/space-infix-ops': ['error'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/object-curly-spacing': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/padding-line-between-statements': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/quotes': ['off'],
+        /**
+         * It can break consistency of similar functions.
+         * It can hinder the fact that developer can use await in a given function.
+         */
+        '@typescript-eslint/require-await': ['off'],
+        '@typescript-eslint/return-await': ['error', 'in-try-catch'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/semi': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/space-before-blocks': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/space-before-function-paren': ['off'],
+        /**
+         * Leave it to Prettier.
+         */
+        '@typescript-eslint/space-infix-ops': ['off'],
       },
     },
   ],

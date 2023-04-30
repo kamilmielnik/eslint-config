@@ -352,10 +352,12 @@ module.exports = {
      */
     'no-plusplus': ['off'],
     'no-proto': ['error'],
-    /**
-     * Disabled because of 'no-var' rule.
-     */
-    'no-redeclare': ['off'],
+    'no-redeclare': [
+      'error',
+      {
+        builtinGlobals: false,
+      },
+    ],
     'no-regex-spaces': ['error'],
     /**
      * Disabled because all exports are useful.
@@ -556,7 +558,7 @@ module.exports = {
     'radix': ['error', 'always'],
     /**
      * It can break consistency of similar functions.
-     * It can hinder the fact that developer can use await in given function.
+     * It can hinder the fact that developer can use await in a given function.
      */
     'require-await': ['off'],
     'require-unicode-regexp': ['error'],

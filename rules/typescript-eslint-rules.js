@@ -11,8 +11,8 @@ module.exports = {
         '@typescript-eslint/array-type': [
           'error',
           {
-            default: 'generic',
-            readonly: 'generic',
+            default: 'array',
+            readonly: 'array',
           },
         ],
         '@typescript-eslint/await-thenable': ['error'],
@@ -266,6 +266,17 @@ module.exports = {
           {
             selector: 'typeLike',
             format: ['PascalCase'],
+          },
+          {
+            selector: 'accessor',
+            format: null,
+            custom: {
+              /**
+               * Allow numbers as object keys.
+               */
+              regex: '([0-9]+|[a-z][a-zA-Z0-9]*)',
+              match: true,
+            },
           },
         ],
         '@typescript-eslint/no-base-to-string': [
@@ -564,7 +575,15 @@ module.exports = {
          * This rule is too eager.
          */
         '@typescript-eslint/typedef': ['off'],
-        '@typescript-eslint/unbound-method': ['error'],
+        '@typescript-eslint/unbound-method': [
+          'error',
+          {
+            /**
+             * Disabled because it would give too many false positives.
+             */
+            ignoreStatic: true,
+          },
+        ],
         '@typescript-eslint/unified-signatures': [
           'error',
           {
